@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./demo-disclaimer-bar.module.css";
 
-export function DemoDisclaimerBar({ companyName }: { companyName: string }) {
+export function DemoDisclaimerBar({ companyName, detailText }: { companyName: string; detailText?: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function DemoDisclaimerBar({ companyName }: { companyName: string }) {
       <div className={styles.inner}>
         <div className={styles.copy}><strong>Concept de démonstration — non officiel</strong></div>
         <div className={styles.links}>
-          <details ref={detailsRef}><summary>À propos de cette démo</summary><div className={styles.popover}>Cette page est un concept indépendant réalisé à des fins de démonstration et de prospection. Elle ne représente pas le site officiel de {companyName} et n’implique aucune collaboration ou approbation de l’entreprise.</div></details>
+          <details ref={detailsRef}><summary>À propos de cette démo</summary><div className={styles.popover}>{detailText ?? <>Cette page est un concept indépendant réalisé à des fins de démonstration et de prospection. Elle ne représente pas le site officiel de {companyName} et n’implique aucune collaboration ou approbation de l’entreprise.</>}</div></details>
           <a href="https://www.cedricnampa.com/">cedricnampa.com</a>
         </div>
       </div>

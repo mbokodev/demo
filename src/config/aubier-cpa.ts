@@ -1,0 +1,43 @@
+export const aubierCpa = {
+  slug: "aubier-cpa",
+  companyName: "Aubier CPA",
+  legalName: "Aubier CPA inc.",
+  crmId: "PRO-2026-003",
+  industry: "Comptabilité / Fiscalité / Conseil",
+  since: "1993",
+  phone: { display: "1 877 217-6997", href: "tel:+18772176997" },
+  email: "info@aubiercpa.ca",
+  officialWebsite: "https://www.aubiercpa.ca/",
+  logo: { src: "/aubier-cpa/logo.png", alt: "Aubier CPA" },
+  needs: [
+    { number: "01", title: "Gérer mon entreprise", text: "Structurer la comptabilité courante et obtenir une lecture plus claire de la situation financière.", tags: ["Tenue de registres", "Paie", "États financiers"] },
+    { number: "02", title: "Optimiser ma fiscalité", text: "Planifier et produire les obligations fiscales de l’entreprise, du particulier ou de la fiducie.", tags: ["Fiscalité", "Planification", "Représentation"] },
+    { number: "03", title: "Démarrer ou redresser", text: "Être accompagné dans la mise en place, le financement ou le redressement d’une entreprise.", tags: ["Démarrage", "Financement", "Redressement"] },
+    { number: "04", title: "Acheter ou vendre", text: "Préparer une transaction d’entreprise avec une perspective comptable, fiscale et stratégique.", tags: ["Acquisition", "Vente", "Conseil"] },
+    { number: "05", title: "Planifier une succession", text: "Aborder la planification, la gestion ou la liquidation successorale avec une vision d’ensemble.", tags: ["Planification", "Gestion", "Liquidation"] },
+    { number: "06", title: "Répondre à un besoin personnel", text: "Obtenir un accompagnement pour les déclarations personnelles et certaines situations fiscales.", tags: ["Particuliers", "Fiducies", "Fiscalité"] },
+  ],
+  expertise: [
+    { title: "Comptabilité & certification", text: "États financiers annuels, compilation, mission d’examen, audit et mise à niveau selon les normes applicables." },
+    { title: "Fiscalité", text: "Déclarations corporatives, personnelles et de fiducies, planification et représentation auprès des autorités fiscales." },
+    { title: "Tenue de registres", text: "Paie, remises, taxes, conciliations, opérations comptables et états financiers intérimaires." },
+    { title: "Gestion & stratégie", text: "Analyse financière, financement de projets, démarrage, redressement et expertise-conseil." },
+    { title: "Transactions", text: "Accompagnement lors de l’achat ou de la vente d’une entreprise et réorganisations corporatives." },
+    { title: "Immobilier & succession", text: "Gestion immobilière, planification successorale, gestion et liquidation de successions." },
+  ],
+  offices: [
+    { name: "Aubier CPA — Sainte-Foy", address: "2511, chemin Sainte-Foy, bureau 210", city: "Québec (QC) G1V 1T7", phone: "418-652-9064", href: "tel:+14186529064" },
+    { name: "Aubier CPA — Promenades Beauport", address: "3333, rue du Carrefour, local A253", city: "Québec (QC) G1C 5R9", phone: "418-663-2066", href: "tel:+14186632066" },
+    { name: "Aubier Comptabilité et Impôts — Beauport", address: "2000, avenue Sanfaçon, bureau 100", city: "Québec (QC) G1E 3R7", phone: "418-664-1782", href: "tel:+14186641782" },
+    { name: "Aubier CPA — Baie-Saint-Paul", address: "2A, rue Saint-Pierre", city: "Baie-Saint-Paul (QC) G3Z 2R5", phone: "418-435-9914", href: "tel:+14184359914" },
+  ],
+  team: [
+    { name: "Yves St-Laurent", title: "Conseiller sénior", image: "/aubier-cpa/yves-st-laurent.jpg" },
+    { name: "Guillaume Gauthier-Morin", title: "M.Sc., CPA Auditeur, Associé", image: "/aubier-cpa/guillaume-gauthier-morin.jpg" },
+  ],
+  insights: [
+    { category: "Fiscalité automobile", title: "Frais d’automobile", text: "Les taux d’allocation kilométrique et le calcul de l’avantage automobile dans un contexte d’affaires." },
+    { category: "Planification", title: "La planification fiscale", text: "Des gestes à considérer au fil de l’année selon la situation personnelle, familiale ou entrepreneuriale." },
+    { category: "Actualité fiscale", title: "Budget fédéral 2025", text: "Un aperçu des mesures fiscales annoncées dans le budget fédéral." },
+  ],
+} as const;
