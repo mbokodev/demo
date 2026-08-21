@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { DemoDisclaimerBar } from "@/components/demo/demo-disclaimer-bar";
 import { DemoFooterDisclaimer } from "@/components/demo/demo-footer-disclaimer";
+import { ScrollToTopButton } from "@/components/demo/scroll-to-top-button";
 import { servicesLMJ } from "@/config/services-lmj";
 import { MobileCta, MobileMenu, QuoteForm } from "./services-lmj-client";
 
@@ -68,5 +69,6 @@ export default function ServicesLMJPage() {
 
     <footer className="lmj-footer" id="contact"><div className="lmj-shell lmj-footer-grid"><div><a className="lmj-brand footer-brand" href="#accueil"><span className="lmj-brand-mark"><Image src="/services-lmj/logo-mark.png" alt="" width={52} height={52} /></span><span><strong>SERVICES LMJ</strong><small>Plomberie résidentielle &amp; commerciale</small></span></a><p>Installation · Réparation · Rénovation</p><p>RBQ {servicesLMJ.rbq}</p></div><div><strong>Coordonnées</strong><a href={servicesLMJ.phone.href}>{servicesLMJ.phone.display}</a><a href={`mailto:${servicesLMJ.email}`}>{servicesLMJ.email}</a><span>{servicesLMJ.location}</span></div><div><strong>Heures indiquées</strong><span>{servicesLMJ.hours.opening} — {servicesLMJ.hours.closing}</span><span>{servicesLMJ.hours.days}</span></div><div><strong>Navigation</strong><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#soumission">Soumission</a></div></div><div className="lmj-shell"><DemoFooterDisclaimer companyName={servicesLMJ.companyName} /></div></footer>
     <MobileCta />
+    <ScrollToTopButton />
   </div>;
 }

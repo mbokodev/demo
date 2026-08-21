@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { DemoDisclaimerBar } from "@/components/demo/demo-disclaimer-bar";
 import { DemoFooterDisclaimer } from "@/components/demo/demo-footer-disclaimer";
+import { ScrollToTopButton } from "@/components/demo/scroll-to-top-button";
 import { comptableDupuis } from "@/config/comptable-dupuis";
 import { AppointmentForm, DupuisMobileCta, DupuisMobileMenu } from "./comptable-dupuis-client";
 
@@ -66,5 +67,6 @@ export default function ComptableDupuisPage() {
 
     <footer className="dupuis-footer" id="contact"><div className="dupuis-shell dupuis-footer-grid"><div><Image src={comptableDupuis.logo.src} alt={comptableDupuis.logo.alt} width={210} height={75} /><p>Comptabilité · Fiscalité · Accompagnement</p><p>{comptableDupuis.experience}</p></div><div><strong>Coordonnées</strong><a href={comptableDupuis.phone.href}>{comptableDupuis.phone.display}</a><a href={`mailto:${comptableDupuis.email}`}>{comptableDupuis.email}</a><address>{comptableDupuis.address.line1}<br />{comptableDupuis.address.line2}</address></div><div><strong>Parcours</strong><a href="#particuliers">Particuliers</a><a href="#pme">Entrepreneurs et PME</a><a href="#rendez-vous">Prendre rendez-vous</a></div><div><strong>En ligne</strong><a href={comptableDupuis.officialWebsite}>Site officiel</a><span>{comptableDupuis.location}</span></div></div><div className="dupuis-shell"><DemoFooterDisclaimer companyName={comptableDupuis.companyName} /></div></footer>
     <DupuisMobileCta />
+    <ScrollToTopButton />
   </div>;
 }
