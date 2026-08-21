@@ -2,6 +2,8 @@
 
 Landing page et infrastructure des concepts numériques présentés sur `demo.cedricnampa.com`.
 
+Déploiement continu assuré par Vercel depuis la branche `main`.
+
 ## Développement
 
 ```bash
