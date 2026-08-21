@@ -1,0 +1,3 @@
+export function DemoNotice({ companyName }: { companyName: string }) {
+  return <aside className="demo-notice" aria-label="Avertissement"><div><strong>Concept de démonstration — non officiel</strong><p>Cette proposition a été réalisée indépendamment par Cédric Nampa afin d’illustrer une piste de modernisation numérique pour {companyName}.</p></div><details><summary>À propos de cette démonstration</summary><div>Ce concept ne représente pas le site officiel de {companyName}, ne constitue pas une approbation ou un partenariat et ne signifie pas qu’une relation commerciale existe.</div></details></aside>;
+}
