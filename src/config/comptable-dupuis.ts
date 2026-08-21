@@ -1,0 +1,47 @@
+export const comptableDupuis = {
+  slug: "comptable-dupuis",
+  companyName: "Gestion Comptable Kathy Dupuis",
+  crmId: "PRO-2026-002",
+  location: "Laval et la Rive-Nord",
+  experience: "Plus de 25 ans d’expérience",
+  phone: { display: "450 689-8491", href: "tel:+14506898491" },
+  email: "kathydupuis@videotron.ca",
+  address: {
+    line1: "3030, boulevard Curé-Labelle, suite 300",
+    line2: "Laval (Québec) H7P 0H9",
+    mapEmbed: "https://www.google.com/maps?q=3030%20boulevard%20Cur%C3%A9-Labelle%2C%20Laval%2C%20QC%20H7P%200H9&output=embed",
+    directions: "https://www.google.com/maps/search/?api=1&query=3030%20boulevard%20Cur%C3%A9-Labelle%2C%20Laval%2C%20QC%20H7P%200H9",
+  },
+  officialWebsite: "https://comptabledupuis.com/",
+  individuals: [
+    "Service-conseil",
+    "Impôt personnel",
+    "Travailleur autonome",
+    "Revenu de location",
+    "Certificat de conformité non-résident",
+    "Succession après décès",
+  ],
+  businesses: [
+    "Démarrage et incorporation",
+    "Société de gestion",
+    "Roulement des actifs",
+    "Structure financière pour PME",
+    "Tenue de livres",
+    "Documents gouvernementaux",
+    "Rémunération et paie",
+    "Relevés annuels",
+    "Conseils fiscaux",
+    "Informations financières et impôt",
+    "Analyse financière",
+    "Travailleur autonome",
+  ],
+  serviceGroups: [
+    { number: "01", title: "Comptabilité courante", description: "Une prise en charge structurée des obligations comptables récurrentes.", items: ["Tenue de livres", "Rémunération et paie", "Documents gouvernementaux", "Relevés annuels"] },
+    { number: "02", title: "Fiscalité", description: "Des services fiscaux adaptés aux réalités personnelles et professionnelles.", items: ["Impôt personnel", "Travailleurs autonomes", "Conseils fiscaux", "Informations financières et impôt"] },
+    { number: "03", title: "Entreprises", description: "Un accompagnement pour structurer et mieux comprendre les finances de l’entreprise.", items: ["Démarrage et incorporation", "Société de gestion", "Structure financière", "Analyse financière"] },
+    { number: "04", title: "Situations particulières", description: "Des besoins qui demandent une lecture attentive de la situation.", items: ["Revenus locatifs", "Succession après décès", "Conformité non-résident", "Service-conseil"] },
+  ],
+  logo: { src: "/comptable-dupuis/logo.png", alt: "Gestion Comptable Kathy Dupuis" },
+} as const;
+
+export type ComptableDupuisConfig = typeof comptableDupuis;
