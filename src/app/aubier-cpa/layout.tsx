@@ -1,9 +1,9 @@
-import { Instrument_Serif, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./aubier-cpa.css";
 import "./aubier-brand.css";
 
-const sans = Manrope({ subsets: ["latin"], variable: "--font-aubier-sans", display: "swap" });
-const serif = Instrument_Serif({ subsets: ["latin"], variable: "--font-aubier-serif", display: "swap", weight: "400" });
+const sans = localFont({ src: [{ path: "../fonts/manrope/normal-200-800.woff2", weight: "200 800", style: "normal" }], variable: "--font-aubier-sans", display: "swap" });
+const serif = localFont({ src: [{ path: "../fonts/instrumentserif/normal-400.woff2", weight: "400", style: "normal" }], variable: "--font-aubier-serif", display: "swap", adjustFontFallback: "Times New Roman" });
 
 export default function AubierCpaLayout({ children }: LayoutProps<"/aubier-cpa">) {
   return <div className={`${sans.variable} ${serif.variable}`}>{children}</div>;

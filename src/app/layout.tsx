@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ variable: "--font-sans", subsets: ["latin"], display: "swap" });
-const cormorant = Cormorant_Garamond({ variable: "--font-display", subsets: ["latin"], weight: ["500", "600"], display: "swap" });
+const inter = localFont({ src: [{ path: "./fonts/inter/normal-100-900.woff2", weight: "100 900", style: "normal" }], variable: "--font-sans", display: "swap" });
+const cormorant = localFont({ src: [{ path: "./fonts/cormorantgaramond/normal-300-700.woff2", weight: "300 700", style: "normal" }], variable: "--font-display", display: "swap", adjustFontFallback: "Times New Roman" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://demo.cedricnampa.com"),
