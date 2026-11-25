@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
 import { services } from "./services";
 
@@ -55,4 +56,21 @@ export function QuoteForm() {
       <button type="button" className="gnh-copy" onClick={async () => { try { await navigator.clipboard.writeText(summary); setCopied(true); } catch { /* Le récapitulatif reste sélectionnable. */ } }}>Copier le récapitulatif</button>
     </div>}
   </form>;
+}
+
+export function ServiceExplorer() {
+  const [active, setActive] = useState(0);
+  const selected = services[active];
+  return <div className="gnh-explorer">
+    <div className="gnh-service-list" role="tablist" aria-label="Nos expertises">
+      {services.map((service,index)=><button type="button" role="tab" id={`gnh-tab-${service.id}`} key={service.id} aria-selected={index===active} aria-controls={`gnh-panel-${service.id}`} tabIndex={index===active?0:-1} onClick={()=>setActive(index)} onKeyDown={event=>{
+        const next=event.key==="ArrowDown"||event.key==="ArrowRight"?(index+1)%services.length:event.key==="ArrowUp"||event.key==="ArrowLeft"?(index+services.length-1)%services.length:event.key==="Home"?0:event.key==="End"?services.length-1:-1;
+        if(next<0)return;event.preventDefault();setActive(next);document.getElementById(`gnh-tab-${services[next].id}`)?.focus();
+      }}><span className="gnh-service-number">0{index+1}</span><span><small>{service.subtitle}</small><strong>{service.title}</strong></span><span className="gnh-service-arrow" aria-hidden="true">↗</span></button>)}
+    </div>
+    <div className="gnh-service-scene" role="tabpanel" id={`gnh-panel-${selected.id}`} aria-labelledby={`gnh-tab-${selected.id}`} tabIndex={0}>
+      <div className="gnh-service-photo"><Image key={selected.id} src={`/groupe-nouvelle-horizon/${selected.id}.webp`} alt={`Illustration du service ${selected.title}`} fill sizes="(max-width:760px) 90vw, 48vw"/><span>Visuel d’illustration</span></div>
+      <div className="gnh-service-description"><h3>{selected.description}</h3><p>{selected.details}</p><a href="#soumission">Discuter de ce besoin <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </div>;
 }
